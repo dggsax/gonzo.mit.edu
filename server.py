@@ -5,13 +5,6 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-#mysql = MySQL()
-#app.config['MYSQL_DATABASE_USER'] = '6s08'
-#app.config['MYSQL_DATABASE_PASSWORD'] = 'dome-crawler'
-#app.config['MYSQL_DATABASE_DB'] = '6s08'
-#app.config['MYSQL_DATABASE_HOST'] = 'domecrawl.us'
-#mysql.init_app(app)
-
 @app.route("/")
 def hello():
     return send_from_directory("static", "index.html")
