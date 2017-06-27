@@ -7,7 +7,7 @@ api = Api(app)
 
 @app.route("/")
 def hello():
-    return send_from_directory("static", "index.html")
+    return send_from_directory("pages", "index.html")
 
 @app.route("/<path:path>")
 def open_file(path):
