@@ -1,6 +1,11 @@
 html *
 {
-   font-family: Avenir;
-   border: 0;
-   align-content: center;
+	font-family: Avenir;
+	border: 0;
+	align-content: center;
+}
+
+#life {
+	margin: auto;
+	justify-content: "right";
 }
