@@ -4,9 +4,9 @@ from threading import Thread, Lock
 from flask import Flask, render_template, session, request
 from flask_socketio import SocketIO, emit, join_room, leave_room,close_room, rooms, disconnect
 
-import logging
-log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
+# import logging
+# log = logging.getLogger('werkzeug')
+# log.setLevel(logging.ERROR)
 
 async_mode = None
 if async_mode is None:
@@ -56,21 +56,6 @@ def index():
         thread.daemon = True
         thread.start()
     return render_template('pages/index.html')
-
-# # Autopilot for sliders
-# @socketio.on('reporting_1069')
-# def action(content):
-#     # Define variables
-#     unique = content['unique']
-#     div = content['div']
-#     data = content['data'] 
-#     # Emit Variables
-#     socketio.emit('autopilot_{}'.format(unique),data=(div,data))
-#     # break
-
-# @socketio.on('lit')
-# def action():
-#     print("It is indeed very, very lit")
 
 if __name__ == '__main__':
     socketio.run(app, port=5000, debug=True)
