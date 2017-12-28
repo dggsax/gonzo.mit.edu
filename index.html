@@ -1,14 +1,37 @@
+<!DOCTYPE html>
 <head>
     <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="static/less/styles.less"> -->
-    <!-- Javascript Stuff -->
-    <!-- <script src="static/js/less.min.js"></script> -->
-
-
-    
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.fullPage.css">
+    <!-- Javascript Stuff -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.fullPage.js"></script>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <div id="fullpage">
+        <div class="section">
+            <h1 class="wrap">Hi, I'm Gonzo.</h1>
+        </div>
+
+        <div class="section">
+            <div class="wrap">
+                <h2>This is my website</h2>
+            
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="wrap">
+                <h2>Hey there!</h2>
+
+            </div>
+        </div>
+    </div>
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage();
+    });
+</script>
