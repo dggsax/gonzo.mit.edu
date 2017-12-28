@@ -1,0 +1,17 @@
+#header {
+  color: #6c94be;
+}
+h1 {
+  color: #ff7b7b;
+  font-weight: 300;
+}
+h1 span {
+  font-weight: 600;
+  color: #ff4545;
+}
+h1:hover {
+  color: #c80000;
+}
+h1:hover span {
+  color: #32323a;
+}
