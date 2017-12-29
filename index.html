@@ -10,21 +10,31 @@
 
 <body>
     <div id="fullpage">
-        <div class="section">
-            <h1 class="wrap">Hi, I'm Gonzo.</h1>
+        <div class="section" id="intro">
+            <div class="bg"></div>
+            <div class="content">
+                <h1>Gonzo</h1>    
+            </div>
+            
         </div>
 
-        <div class="section">
-            <div class="wrap">
-                <h2>This is my website</h2>
-            
+        <div class="section" id="section2">
+            <div class="bg"></div>
+            <div class="content">
+                <h1>MIT Student</h1>    
             </div>
         </div>
 
-        <div class="section">
-            <div class="wrap">
-                <h2>Hey there!</h2>
-
+        <div class="section" id="section3">
+            <div class="bg"></div>
+            <div class="content">
+                <h1>About this website</h1>
+                <p>
+                    I made this website in a day! In fact, I started
+                    seriously working on this <t id="hours"></t> hour(s) and <t id="minutes"></t> minutes ago
+                    since my initial commit (with periods of procrastionation and etc. of course). It's a fun mix of gulp,
+                    lesscss, fullPage, and other things. Hope you enjoy!
+                </p>
             </div>
         </div>
     </div>
@@ -32,6 +42,26 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+            scrollingSpeed: 1000, 
+        });
+        
+        // Date of initial commit 'lol starting over'
+        var start = new Date("December 28, 2017 12:00:00");
+        
+        function timeDifference() {
+            var now = new Date();
+            var diff = (now - start)/1000/60; // in minutes
+            var minutes = Math.floor(diff % 60);
+            var hours = Math.floor((diff / 60) % 24);  
+
+            $('#hours').text(hours);
+            $('#minutes').text(minutes);
+        }
+
+        setInterval( timeDifference(), 1000 * 60 );
+
     });
+
+    
 </script>

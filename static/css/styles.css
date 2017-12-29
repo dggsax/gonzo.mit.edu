@@ -1,24 +1,44 @@
-#header {
-  color: #6c94be;
-}
 h1 {
-  color: #6c94be;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
-h1 span {
-  font-weight: 600;
-  color: #ff4545;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 700;
+  color: #292727;
+  transition: all 225ms ease 0ms;
 }
 h1:hover {
-  color: #c80000;
+  color: #0f0e0e;
 }
-h1:hover span {
-  color: #32323a;
+.section {
+  text-align: center;
 }
-.wrap {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+.section .bg {
+  background: inherit;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -15%;
+  right: 0;
+  width: 130%;
+}
+#intro .bg {
+  background: #e97b67;
+}
+#section2 .bg {
+  background: #87bfe4;
+}
+#section3 .bg {
+  background: #f5f2de;
+}
+.content {
+  z-index: 99;
   position: relative;
+}
+.content h1 {
+  font-size: 200px;
+  font-size: 10vh;
+  margin: 10px;
+}
+.content p {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
 }
