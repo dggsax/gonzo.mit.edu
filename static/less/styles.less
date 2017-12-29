@@ -3,21 +3,6 @@
 @page-width: 1000px;
 @color: rgb(41, 39, 39);
 
-h1 {
-    .fancy-text();
-    color: @color;
-    transition: all 225ms ease 0ms;
-
-    &:hover {
-        color: darken(@color, 10%);
-    }
-}
-
-.fancy-text() {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 700;
-}
-
 // fullPage.js stuff
 .section {
     text-align: center;
@@ -33,45 +18,89 @@ h1 {
     }
 }
 
+ul {
+    list-style-type: none;
+}
+
 #intro {
 
     .bg {
         background: #e97b67;
-        // z-index: 8;
+
     }
 
-    
 }
 
 #section2 {
-
+    vertical-align: center;
     .bg {
         background: #87bfe4;
-        // z-index: 7;
+
     }
+
 }
 
 #section3 {
     .bg {
         background: #f5f2de;
-        // z-index: 6;
+
     }
+
 }
 
 .content {
     z-index: 99;
     position: relative;
-    
+    margin-left: 20%;
+    margin-right: 20%;
     h1 {
+        .fancy-text();
+        color: @color;
+        transition: all 225ms ease 0ms;
+    
+        &:hover {
+            color: darken(@color, 10%);
+        }
+    }
+
+    p {
+        .normal-text();
+        text-align: left;
+        
+    }
+
+    .fancy-text() {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 700;
         font-size: 200px;
         font-size: 10vh;
         margin: 10px;
     }
 
-    p {
-        text-align: left;
-        margin-left: 20%;
-        margin-right: 20%;
+    .normal-text() {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-size: vh;
     }
 
-}   
+    .list {
+        margin-left: 10%;
+        margin-right: 10%;
+
+        p {
+            margin-left: 0px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: square;    
+        }
+
+        li {
+            .normal-text();
+            text-align: left;
+            padding-bottom: 5px;
+        }
+    }
+    
+}

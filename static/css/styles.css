@@ -1,12 +1,3 @@
-h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 700;
-  color: #292727;
-  transition: all 225ms ease 0ms;
-}
-h1:hover {
-  color: #0f0e0e;
-}
 .section {
   text-align: center;
 }
@@ -19,8 +10,14 @@ h1:hover {
   right: 0;
   width: 130%;
 }
+ul {
+  list-style-type: none;
+}
 #intro .bg {
   background: #e97b67;
+}
+#section2 {
+  vertical-align: center;
 }
 #section2 .bg {
   background: #87bfe4;
@@ -31,14 +28,42 @@ h1:hover {
 .content {
   z-index: 99;
   position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .content h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 700;
   font-size: 200px;
   font-size: 10vh;
   margin: 10px;
+  color: #292727;
+  transition: all 225ms ease 0ms;
+}
+.content h1:hover {
+  color: #0f0e0e;
 }
 .content p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-size: vh;
   text-align: left;
-  margin-left: 20%;
-  margin-right: 20%;
+}
+.content .list {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.content .list p {
+  margin-left: 0px;
+  font-weight: 600;
+}
+.content .list ul {
+  list-style: square;
+}
+.content .list li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-size: vh;
+  text-align: left;
+  padding-bottom: 5px;
 }
