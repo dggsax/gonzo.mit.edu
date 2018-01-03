@@ -1,7 +1,36 @@
-@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
-@page-width: 1000px;
-@color: rgb(41, 39, 39);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono);
+@font-color: rgb(78, 78, 78);
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    li {
+
+        display: inline-block;
+        margin: 10px;
+        background: rgba(255,255,255, 0.5);
+        border-radius: 10px;
+        .normal-text();
+        
+        a {
+            color: #333;
+            padding: 9px 18px;
+            display: block;
+            text-decoration: none;
+        }
+
+        &.active {
+            background: rgba(0,0,0, 0.25);
+        }
+    }
+}
 
 // fullPage.js stuff
 .section {
@@ -16,6 +45,17 @@
         right: 0;
         width: 130%;
     }
+
+    .scribble {
+        width: 100px;
+    }
+
+    i {
+        text-decoration: none;
+        color: @font-color;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
 }
 
 ul {
@@ -23,10 +63,18 @@ ul {
 }
 
 #intro {
+    
 
     .bg {
         background: #e97b67;
 
+    }
+
+    .content {
+        text-align: center;
+        h1 {
+            font-size: 35px;
+        }
     }
 
 }
@@ -43,7 +91,6 @@ ul {
 #section3 {
     .bg {
         background: #f5f2de;
-
     }
 
 }
@@ -53,38 +100,30 @@ ul {
     position: relative;
     margin-left: 20%;
     margin-right: 20%;
-    h1 {
-        .fancy-text();
-        color: @color;
-        transition: all 225ms ease 0ms;
-    
-        &:hover {
-            color: darken(@color, 10%);
-        }
+    text-align: left;
+
+    hr {
+        border: 0;
+        display: inline-block;
+        margin-top: 10em;
+        margin-bottom: 0.5em;
+        background-color: darken(@font-color, 1);
+        height: 3px;
+        width: 20%;
     }
 
+    h1 {
+        .header_text();
+        // color: rgb(0, 0, 0);
+    }
     p {
         .normal-text();
         text-align: left;
         
     }
 
-    .fancy-text() {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-weight: 700;
-        font-size: 200px;
-        font-size: 5vh;
-        margin: 10px;
-    }
-
-    .normal-text() {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-        font-size: 2vh;
-    }
-
     .list {
-        margin-left: 10%;
+        margin-left: 2%;
         margin-right: 10%;
 
         p {
@@ -103,4 +142,16 @@ ul {
         }
     }
 
+}
+
+.header_text() {
+    font-family: Roboto Mono;
+    font-size: 25px;
+    color: @font-color;
+}
+
+.normal-text() {
+    font-family: Roboto Mono;
+    font-size: 15px;
+    color: @font-color;
 }

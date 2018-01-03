@@ -1,3 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono);
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#menu li {
+  display: inline-block;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  font-family: Roboto Mono;
+  font-size: 15px;
+  color: #4e4e4e;
+}
+#menu li a {
+  color: #333;
+  padding: 9px 18px;
+  display: block;
+  text-decoration: none;
+}
+#menu li.active {
+  background: rgba(0, 0, 0, 0.25);
+}
 .section {
   text-align: center;
 }
@@ -10,11 +39,26 @@
   right: 0;
   width: 130%;
 }
+.section .scribble {
+  width: 100px;
+}
+.section i {
+  text-decoration: none;
+  color: #4e4e4e;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
 ul {
   list-style-type: none;
 }
 #intro .bg {
   background: #e97b67;
+}
+#intro .content {
+  text-align: center;
+}
+#intro .content h1 {
+  font-size: 35px;
 }
 #section2 {
   vertical-align: center;
@@ -30,27 +74,30 @@ ul {
   position: relative;
   margin-left: 20%;
   margin-right: 20%;
+  text-align: left;
+}
+.content hr {
+  border: 0;
+  display: inline-block;
+  margin-top: 10em;
+  margin-bottom: 0.5em;
+  background-color: #4b4b4b;
+  height: 3px;
+  width: 20%;
 }
 .content h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 700;
-  font-size: 200px;
-  font-size: 5vh;
-  margin: 10px;
-  color: #292727;
-  transition: all 225ms ease 0ms;
-}
-.content h1:hover {
-  color: #0f0e0e;
+  font-family: Roboto Mono;
+  font-size: 25px;
+  color: #4e4e4e;
 }
 .content p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto Mono;
   font-size: 15px;
-  font-size: 2vh;
+  color: #4e4e4e;
   text-align: left;
 }
 .content .list {
-  margin-left: 10%;
+  margin-left: 2%;
   margin-right: 10%;
 }
 .content .list p {
@@ -61,9 +108,9 @@ ul {
   list-style: square;
 }
 .content .list li {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto Mono;
   font-size: 15px;
-  font-size: 2vh;
+  color: #4e4e4e;
   text-align: left;
   padding-bottom: 5px;
 }
