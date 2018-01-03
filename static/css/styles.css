@@ -45,7 +45,6 @@
 .section i {
   text-decoration: none;
   color: #4e4e4e;
-  padding-left: 0.5em;
   padding-right: 0.5em;
 }
 ul {
@@ -55,7 +54,7 @@ ul {
   background: #e97b67;
 }
 #intro .content {
-  text-align: center;
+  text-align: left;
 }
 #intro .content h1 {
   font-size: 35px;
