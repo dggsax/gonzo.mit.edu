@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <head>
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="static/css/jquery.fullPage.css">
+    
     <!-- Javascript Stuff -->
     <script type="text/javascript" src="static/js/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/jquery.fullPage.js"></script>
 </head>
 
 <body>
+    <!-- <ul id="menu">
+        <li data-menuanchor="firstpage">
+            <a href='#firstpage'>Hi!</a>
+        </li>
+        <li data-menuanchor="aboutme">
+            <a href='#aboutme'>About me</a>
+        </li>
+        <li data-menuanchor="thirdpage">
+            <a href='#thirdpage'>About this website</a>
+        </li>
+        <li data-menuanchor="fourthpage">
+            <a href='#fourthpage'>About me</a>
+        </li>
+    </ul>-->
+
     <div id="fullpage">
-        <div class="section" id="intro">
+        <div class="section" id="intro" data-anchor="firstpage">
             <div class="bg"></div>
             <div class="content">
-                <h1>Gonzo!</h1>    
+                <h1>Gonzo.</h1>    
+                <a href="https://github.com/dggsax" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://twitter.com/DanielGonzo2016" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.facebook.com/dggsax" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/dangonzo" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
-            
         </div>
-
-        <div class="section" id="section2">
+        <div class="section" id="section2" data-anchor="aboutme">
             <div class="bg"></div>
             <div class="content">
                 <h1>About Me</h1>
@@ -39,38 +58,46 @@
                     </ul>
                     <p>Things I dislike:</p>
                     <ul>
-                        <li>Vegetarianism</li>
-                        <li>Veganism</li>
+                        <li>Wisdom Tooth Surgery</li>
                         <li>Sarcasm ;)</li>
                         <li>emacs</li>
                     </ul>
                 </div>
+                <hr>
             </div>
         </div>
-
-        <div class="section" id="section3">
+        <div class="section" id="section3" data-anchor="thirdpage">
             <div class="bg"></div>
             <div class="content">
                 <h1>About this website</h1>
                 <p>
                     I made this website in a day! In fact, I started
-                    seriously working on this <t id="hours"></t> hour(s) and <t id="minutes"></t> minutes ago
+                    seriously working on this <t id="days"></t> days <t id="hours"></t> hour(s) and <t id="minutes"></t> minutes ago
                     since my initial commit (with periods of procrastionation and etc. of course). It's a fun mix of gulp,
                     lesscss, fullPage, and other things. Hope you enjoy!
                     <br><br>
                     There will be a few cool features and stuff on here (such as a dynamic tool that shows you my satisfaction level for 
                     each of my github repositories) and links to my social media and stuff. Woo.
                 </p>
-
+                <hr>
             </div>
         </div>
+        <!-- <div class="section" id="section4" data-anchor="fourthpage">
+            <div class="slide">Two 1</div>
+            <div class="slide">Two 2</div>
+        </div> -->
     </div>
 </body>
 
 <script type="text/javascript">
     $(document).ready(function() {
         $('#fullpage').fullpage({
-            scrollingSpeed: 1000, 
+            scrollingSpeed: 800,
+            menu: '#menu',
+            navigation: true,
+            anchors: ['firstpage', 'aboutme', 'thirdpage'],
+            
+            
         });
         
         // Date of initial commit 'lol starting over'
@@ -79,9 +106,11 @@
         function timeDifference() {
             var now = new Date();
             var diff = (now - start)/1000/60; // in minutes
-            var minutes = Math.floor(diff % 60);
+            var days = Math.floor((diff / 60) / 24);
             var hours = Math.floor((diff / 60) % 24);  
-
+            var minutes = Math.floor(diff % 60);
+            
+            $('#days').text(days);
             $('#hours').text(hours);
             $('#minutes').text(minutes);
         }
@@ -89,6 +118,4 @@
         setInterval( timeDifference(), 1000 * 60 );
 
     });
-
-    
 </script>
